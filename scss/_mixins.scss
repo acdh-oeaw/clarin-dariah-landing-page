@@ -1,0 +1,98 @@
+
+
+/* Color schema */
+$clarin_blue	: #07426e;  //2387aa
+$dariah_blue	: #1E6BA3;
+$blue			: $dariah_blue;
+$green			: #61A845;
+$red            : #dc7979;
+$gray           : #6d7278;
+$light-gray     : #d8d8d8;
+
+
+
+
+/* general text formatting */
+$text-color     : $gray;
+$em-color       : #333;
+$line-height    : 1.7em;
+
+
+/* base layout & responsive sizing */
+
+/* amount of space to reserve for lateral whitespace */
+$max_width  : 90rem;    // 1440px
+$break_point: 750px;
+$whitespace : 15px;      // relative to height, so padding does not change on resize
+
+
+@font-face {
+    font-family: metropolis;
+    //src: url(../fonts/metropolis/Metropolis-SemiBold.otf);
+    src: url(fonts/metropolis/Metropolis-Regular.otf);
+}
+@font-face {
+    font-family: metropolis;
+    src: url(fonts/metropolis/Metropolis-SemiBold.otf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: bebas;
+    src: url(fonts/bebas_neue/BebasNeue-Regular.otf);
+}
+@font-face {
+    font-family: bebas;
+    src: url(fonts/bebas_neue/BebasNeue-Bold.otf);
+    font-weight: bold;
+}
+
+/* breakpoint definition - use this mixin where appropriate */
+/*
+1080 - 1280
+
+720 - 800
+
+320
+*/
+@mixin respond-to($media) {
+    @if $media == x-small {
+        // smallest iPhone 350px
+        @media only screen and (max-width: 400px) { @content; }
+    }
+    @else if $media == handhelds {
+        // 500 - 700px
+        @media only screen and (max-width: $break_point) { @content; }
+    }
+    // default
+    @else if $media == screens {
+        // tablets & small laptops
+        @media only screen and (min-width: $break_point + 1) { @content; }
+    }
+    @else if $media == x-large {
+        // 80 em on 16px fontsize -> 1280px
+        @media only screen and (min-width: 1280px) { @content; }
+    }
+}
+
+
+// mixin to suppress default styles for select-boxes
+@mixin reset-select {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-family: metropolis;
+    &::-ms-expand { display: none; }
+    &:focus::-ms-value { background-color: transparent; }
+}
+
+
+@mixin clearfix() {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}

@@ -9,52 +9,63 @@
     <meta property="og:url"           content="https://clarin-dariah.eu" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="CLARIN-DARIAH Joint Initiatives" />
-    <meta property="og:description"   content="" />
-    <meta property="og:image"         content="" />
+    <meta property="og:description"   content="CLARIN and DARIAH are European Research Infrastructure Consortia in the Arts, Humanities and Social Sciences, that offer technical and social infrastructures. They also play an important roles in educating new generations of researchers and shaping national and European research policy." />
+    <meta property="og:image"         content="CLARIN-DARIAH-joint-logo.png" />
 
     <link rel="icon" href="favicon.ico">
     <link rel="shortcut icon" href="favicon.ico">
 
-
-    <?= $this->Html->css('styles.css') ?>
-    <?= $this->Html->css('/leaflet/leaflet.css') ?>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="<?= $this->request->getParam('action') ?>">
+<body>
 <div id="header">
-    <div id="logo">
-        <?= $this->Html->image('logo-300.png', [
-        'url' => '/',
-        'alt' => 'Digital Humanities Course Registry (logo)'
-        ]); ?>
-    </div>
-    <div id="menu">
-        <?= $this->Html->link('Info', '/info', ['class' => 'blue button', 'id' => 'info-button']) ?>
-        <?= $this->Html->link('Login', Configure::read('ops.baseUrl').'users/login',
-        ['class' => 'button', 'id' => 'login-button']) ?>
-    </div>
+    <a id="logo" href="/"><img src="CLARIN-DARIAH-joint-logo.png"></a>
+    <h1>
+        <span class="top"><span class="clarin">CLARIN</span> & <span class="dariah">DARIAH</span></span>
+        <span class="bottom"><span class="first">Joint</span> Initiatives</span>
+    </h1>
 </div>
 
-<div id="container">
+<div id="introduction">
+    <p>
+        CLARIN and DARIAH are two European Research Infrastructure Consortia for data-driven research
+        in the Arts, Humanities and Social Sciences.
+        They offer technical and social infrastructures in a sustainable way
+        and also play important roles in educating new generations
+        of researchers and shaping national and European research policy.
+    </p>
+    <p>
+        CLARIN’s and DARIAH’s members are countries. Member countries implement and
+        run national infrastructures that conform to either one of the two initiatives' requirements.
+        In some countries, national infrastructures conform to both CLARIN’s
+        and DARIAH’s requirements. Consequently CLARIN and DARIAH will check continuously that these
+        requirements are compatible.
+    </p>
 
-    <?= $this->fetch('content') ?>
-
+    <h2>Cooperation Projects</h2>
+    <p>
+        CLARIN and DARIAH cooperate in several EU projects, most recently in
+        <a href="http://www.parthenos-project.eu/" target="_blank">PARTHENOS</a>,
+        <a href="https://www.sshopencloud.eu/" target="_blank">SSHOC</a>,
+        the <a href="https://www.eric-forum.eu/" target="_blank">ERIC Forum</a>
+        and the Digital Humanities Course Registry, and on policy papers.
+    </p>
 </div>
 
-<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
-<?= $this->Html->script('jquery-3.4.1.min.js') ?>
-
-<!--<script src="<?= Router::url('/leaflet/leaflet.js', true) ?>" type="application/javascript"></script>-->
-<?= $this->Html->script('/leaflet/leaflet') ?>
-<!--<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>-->
-<?= $this->Html->script('/leaflet/leaflet.markercluster') ?>
-
-<?= $this->Html->script(['scroll','hash','slide','sharing','map','modal',
-'filter','filter_helper','view','view_helper','app']) ?>
-
-<?= $this->element('script') ?>
-
-<?= $this->element('matomo') ?>
+<div id="projects">
+    <div class="project-logo">
+        <a href="https://dhcr.clarin-dariah.eu"><img src="dhcr-icon.png" alt="DHCR logo"></a>
+    </div>
+    <div class="project-description">
+        <p>
+            The Digital Humanities Course Registry, hosted under this domain, is a community-driven
+            platform for a most up-to-date overview of DH courses
+            offered at universities worldwide.
+        </p>
+        <p><a href="https://dhcr.clarin-dariah.eu" class="small blue button">Enter the DHCR</a></p>
+    </div>
+</div>
 
 </body>
 </html>
