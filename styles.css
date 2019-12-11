@@ -237,11 +237,10 @@ table .recurring {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: space-around; }
+  justify-content: space-between; }
   .flex-columns .flex-item {
     flex: 0 1 45%;
-    min-width: 300px;
-    padding: 0 15px; }
+    min-width: 300px; }
     .flex-columns .flex-item.wide {
       flex: 0 1 55%; }
     .flex-columns .flex-item.narrow {
@@ -405,8 +404,6 @@ body {
           color: #07426e;
           display: inline; }
 
-#introduction h2 {
-  margin: 1em 0 0.5em; }
 #introduction a.logo {
   margin: 0 auto 3em;
   display: flex;
@@ -420,8 +417,13 @@ body {
     height: auto;
     display: inline-block; }
 
+h2 {
+  margin: 1em 0 0.5em;
+  text-align: center; }
+
 #projects {
-  display: flex; }
+  display: flex;
+  margin-top: 2em; }
   @media only screen and (max-width: 750px) {
     #projects {
       display: block; } }

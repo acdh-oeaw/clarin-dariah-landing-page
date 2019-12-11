@@ -95,9 +95,6 @@ body {
 }
 
 #introduction {
-    h2 {
-        margin: 1em 0 0.5em;
-    }
     // logos clarin & dariah
     a.logo {
         margin: 0 auto 3em;
@@ -116,8 +113,15 @@ body {
     }
 }
 
+h2 {
+    margin: 1em 0 0.5em;
+    text-align: center;
+}
+
+
 #projects {
     display: flex;
+    margin-top: 2em;
     @include respond-to(handhelds) {
         display: block;
     }

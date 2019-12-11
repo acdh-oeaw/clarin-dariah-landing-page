@@ -255,12 +255,11 @@ table {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: space-between;
     .flex-item {
         // define a minimum column width
         flex: 0 1 45%;  // assume 2 columns
         min-width: 300px;
-        padding: 0 $whitespace;
         &.wide {
             flex: 0 1 55%;  // assume 2 columns
         }
