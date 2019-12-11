@@ -98,6 +98,22 @@ body {
     h2 {
         margin: 1em 0 0.5em;
     }
+    // logos clarin & dariah
+    a.logo {
+        margin: 0 auto 3em;
+        display: flex;
+        justify-content: center;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        img {
+            flex: 1 1 80%;
+            max-width: 200px;
+            min-width: 150px;
+            height: auto;
+            display: inline-block;
+        }
+    }
 }
 
 #projects {

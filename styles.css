@@ -407,6 +407,18 @@ body {
 
 #introduction h2 {
   margin: 1em 0 0.5em; }
+#introduction a.logo {
+  margin: 0 auto 3em;
+  display: flex;
+  justify-content: center; }
+  #introduction a.logo:last-child {
+    margin-bottom: 0; }
+  #introduction a.logo img {
+    flex: 1 1 80%;
+    max-width: 200px;
+    min-width: 150px;
+    height: auto;
+    display: inline-block; }
 
 #projects {
   display: flex; }
