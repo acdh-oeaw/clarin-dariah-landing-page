@@ -276,11 +276,19 @@ table {
         min-width: 200px;
     }
     @include respond-to(handhelds) {
-        display: block;
+        //display: block;
+        flex-direction: column-reverse;
         .flex-item {
             margin-bottom: 3em;
             min-width: initial;
             padding: 0;
+
+            &.narrow {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
         }
     }
 }

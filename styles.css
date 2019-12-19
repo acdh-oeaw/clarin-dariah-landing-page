@@ -253,11 +253,16 @@ table .recurring {
     min-width: 200px; }
   @media only screen and (max-width: 750px) {
     .flex-columns {
-      display: block; }
+      flex-direction: column-reverse; }
       .flex-columns .flex-item {
         margin-bottom: 3em;
         min-width: initial;
-        padding: 0; } }
+        padding: 0; }
+        .flex-columns .flex-item.narrow {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%; } }
 
 .footer {
   font-family: metropolis, Sans-Serif;
